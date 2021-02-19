@@ -67,28 +67,33 @@ function calculateResult()
     const value2 = +(document.getElementById('operand2').value);
     const opr = document.getElementById('operator').value;
 
-    switch(opr)
+    if((Number.isFinite(value1) && Number.isFinite(value2)))
     {
-        case "Add":
-            performAddition(value1, value2);
-            break;
-        case "Sub":
-            performSubtraction(value1, value2);
-            break;
-        case "Mul":
-            performMultiplication(value1, value2);
-            break;
-        case "Div":
-            performDivision(value1, value2);
-            break;
-        case "Mod":
-            performModulus(value1, value2);
-            break;
-        case "Exp":
-            performExponentiation(value1, value2);
-            break;  
-        default:
-            alert("Choose a valid operation");
-            break;          
+        switch(opr)
+        {
+            case "Add":
+                performAddition(value1, value2);
+                break;
+            case "Sub":
+                performSubtraction(value1, value2);
+                break;
+            case "Mul":
+                performMultiplication(value1, value2);
+                break;
+            case "Div":
+                performDivision(value1, value2);
+                break;
+            case "Mod":
+                performModulus(value1, value2);
+                break;
+            case "Exp":
+                performExponentiation(value1, value2);
+                break;  
+            default:
+                alert("Choose a valid operation");
+                break;          
+        }
     }
+    else
+    alert("Please Enter An Integer");
 }

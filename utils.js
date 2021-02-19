@@ -67,9 +67,6 @@ function calculateResult()
     const value2 = +(document.getElementById('operand2').value);
     const opr = document.getElementById('operator').value;
 
-    console.log(typeof value1, value1, value2);
-    console.log(opr);
-
     switch(opr)
     {
         case "Add":
